@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "catppuccin/nvim",
-        as = "catppuccin",
+        'catppuccin/nvim',
+        as = 'catppuccin',
         config = function()
-            vim.cmd("colorscheme catppuccin-mocha")
+            vim.cmd('colorscheme catppuccin-mocha')
         end
     }
 
@@ -33,8 +33,8 @@ return require('packer').startup(function(use)
 
     -- Requires node and yarn to be installed
     use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
     })
 
     use {
@@ -60,25 +60,32 @@ return require('packer').startup(function(use)
     use 'airblade/vim-gitgutter'
 
     use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
+        'nvim-neo-tree/neo-tree.nvim',
+        branch = 'v3.x',
         requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+            'MunifTanjim/nui.nvim',
+            -- '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     }
 
-    use 'nvim-tree/nvim-web-devicons'
-
-    use 'goolord/alpha-nvim'
-
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { 'akinsho/bufferline.nvim', tag = '*', requires = 'nvim-tree/nvim-web-devicons' }
 
     use {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        requires = { { "nvim-lua/plenary.nvim" } }
+        'ThePrimeagen/harpoon',
+        branch = 'harpoon2',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+
+    use 'mbbill/undotree'
+
+    use 'nvim-tree/nvim-web-devicons'
+
+    --use 'goolord/alpha-nvim'
+
+    use {
+        'nvimdev/dashboard-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' }
     }
 end)

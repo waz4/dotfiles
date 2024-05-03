@@ -1,6 +1,14 @@
+vim.g.mapleader = " "
+
+-- Netrw Bind
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Remove Swapfiles
+vim.opt.swapfile = false
+
+-- Center After Big moves in file
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.opt.swapfile = false
 
 -- Tab condifg
 vim.o.tabstop = 4      -- A TAB character looks like 4 spaces
@@ -25,5 +33,3 @@ vim.keymap.set("n", "<leader>f", function()
     vim.cmd("LspRestart")
 end)
 
--- Lines dont fold when out of screen
-vim.opt.wrap = false

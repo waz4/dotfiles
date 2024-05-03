@@ -1,4 +1,2 @@
-require("waz4.remaps")
 require("waz4.set")
-
-print("Waza is love!")
+require("waz4.dashboard_headers")

@@ -15,13 +15,9 @@ dashboard.section.buttons.val = {
     dashboard.button("t", "  New file", ":ene <BAR> startinsert <CR>"),
     dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
 }
-local handle = io.popen('fortune')
-local fortune = handle:read("*a")
-handle:close()
-dashboard.section.footer.val = fortune
 
 dashboard.config.opts.noautocmd = true
 
 --vim.cmd [[autocmd User AlphaReady echo 'ready']]
 
-alpha.setup(dashboard.config)
+--alpha.setup(dashboard.config)
