@@ -19,8 +19,9 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 
 -- Find text in current file
 vim.keymap.set('n', '<leader>ps', builtin.current_buffer_fuzzy_find, {})
--- Find text in current file
 
+-- Show Jump List
+vim.keymap.set('n', '<leader>jl', builtin.jumplist, {})
 
 -- Delete selected buffer in show buffer
 local action_state = require('telescope.actions.state')
@@ -61,3 +62,5 @@ end
 
 -- Show buffers
 vim.keymap.set('n', '<leader>pb', buffer_searcher, {})
+
+
